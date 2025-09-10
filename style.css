@@ -79,12 +79,16 @@ div {
     margin: 16px 0;
 }
 header {
-    background-color: #6366f1;
-    color: white;
-    text-align: center;
-    padding: 2em 1em 1em 1em;
-    border-radius: 0 0 16px 16px;
-    box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+        background-color: #6366f1;
+        color: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        border: none;
+        box-shadow: none;
+        text-align: center;
+        font-size: 1.5em;
 }
 h1 {
     font-family: 'Roboto', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
