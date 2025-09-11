@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="style1.css">
 </head>
-<body>
+<body >
     <div class="container">
         <h1>FORMULARIO DE CONTACTO</h1>
         <form id="formulario"  action="#" method="post">
@@ -35,11 +33,13 @@
                 <option value="Mx">Mexico</option>
                 <option value="ar">Argentina</option>
             </select>
-            <input type="submit" name="emviar" id="enviar">
-            <br>
-            <br>
-            <button type="reset">iniciar</button>
-            </form>
+            <div class="button-group">
+                <input type="submit" name="enviar" id="enviar">
+                <input type="reset" name="limpiar" id="limpiar">
+            </div>
+            
+
+        </form>
     </div>
 </body>
 </html>
