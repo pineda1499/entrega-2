@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
 </head>
+<header>
+    <a href="index.html"><span class="material-symbols-outlined">home</span></a> 
+</header>
 <body >
     <div class="container">
         <h1>FORMULARIO DE CONTACTO</h1>
@@ -37,9 +41,39 @@
                 <input type="submit" name="enviar" id="enviar">
                 <input type="reset" name="limpiar" id="limpiar">
             </div>
-            
-
         </form>
+        <script>
+document.getElementById("formulario").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita que se recargue la página
+    // 1. Obtener los valores del formulario
+    let nombre = document.getElementById("nombre").value;
+    let email = document.getElementById("email").value;
+    let telefono = document.getElementById("cel").value;
+    let fecha_nacimiento = document.getElementById("fecha_nacimiento").value;
+    let mensaje = document.getElementById("mensaje").value;
+    let pais = document.getElementById("pais").value;
+    // 2. Validación básica
+    if (nombre === "" || email === "" || telefono === "" || fecha_nacimiento === "" || mensaje === "" || pais === "") {
+        alert("¡Por favor completa todos los campos requeridos!");
+        return; // Detiene el proceso si hay campos vacíos
+    }
+    // 3. Validación de teléfono (debe tener exactamente 10 dígitos)
+    if (!/^[0-9]{10}$/.test(telefono)) {
+        alert("El número de teléfono debe tener exactamente 10 dígitos");
+        return;
+    }
+    // 4. Mostrar los datos (simulación de envío)
+    alert("Mensaje enviado con éxito:\n" +
+        "Nombre: " + nombre + "\n" +
+        "Email: " + email + "\n" +
+        "Teléfono: " + telefono + "\n" +
+        "Fecha de nacimiento: " + fecha_nacimiento + "\n" +
+        "País: " + document.getElementById("pais").options[document.getElementById("pais").selectedIndex].text + "\n" +
+        "Mensaje: " + mensaje);
+    // 5. Limpiar el formulario después de enviar
+    this.reset();
+});
+</script>
     </div>
 </body>
 </html>

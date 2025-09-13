@@ -1,6 +1,5 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -65,3 +64,17 @@ form{
     align-items: center;
     margin: auto;
 }
+header {
+        background-color: #6366f1;
+        color: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        height: 80px;
+        border: none;
+        text-align: center;
+        font-size: 1em;
+        padding-left: 30px;
+        margin: auto;
+}
+
